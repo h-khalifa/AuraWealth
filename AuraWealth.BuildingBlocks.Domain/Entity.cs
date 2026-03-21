@@ -82,5 +82,14 @@ namespace AuraWealth.BuildingBlocks.Domain
             // Multiply by a prime number to avoid hash collisions
             return (GetType().ToString() + Id).GetHashCode() * 97;
         }
+
+        //4. BusinessRules
+        protected static void CheckRule(IBusinessRule rule)
+        {
+            if (rule.IsBroken())
+            {
+                throw new BusinessRuleValidationException(rule);
+            }
+        }
     }
 }
