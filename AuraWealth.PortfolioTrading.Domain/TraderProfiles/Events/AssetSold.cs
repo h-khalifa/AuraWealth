@@ -1,8 +1,7 @@
 ﻿using AuraWealth.BuildingBlocks.Domain;
+using AuraWealth.PortfolioTrading.Domain.Common;
 
 namespace AuraWealth.PortfolioTrading.Domain.TraderProfiles.Events
 {
-    public class AssetSold : IDomainEvent
-    {
-    }
+    public record AssetSold(Guid TraderId, TickerSymbol Symbol, decimal Quantity, Money Proceeds) : DomainEvent;
 }

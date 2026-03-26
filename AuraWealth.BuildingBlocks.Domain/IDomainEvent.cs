@@ -1,10 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using MediatR;
 
 namespace AuraWealth.BuildingBlocks.Domain
 {
-    public interface IDomainEvent
+    public interface IDomainEvent : INotification
     {
+        Guid EventId { get; }
+        DateTime OccurredOn { get; }
     }
 }
