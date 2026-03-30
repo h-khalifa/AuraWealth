@@ -13,8 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TraderProfiles\Commands\SellAsset\" />
-    <Folder Include="TraderProfiles\Commands\WithdrawCash\" />
     <Folder Include="TraderProfiles\Queries\GetPortfolioSummary\" />
     <Folder Include="TraderProfiles\Queries\GetTransactionHistory\" />
     <Folder Include="TraderProfiles\Queries\GetAvailableCash\" />
