@@ -1,6 +1,7 @@
 <Solution>
   <Folder Name="/BuildingBlocks/">
     <Project Path="AuraWealth.BuildingBlocks.Domain/AuraWealth.BuildingBlocks.Domain.csproj" />
+    <Project Path="IntegrationEvents/AuraWealth.BuildingBlocks.IntegrationEvents.csproj" Id="dfd8d8d4-4e69-4cc3-b94f-b5efab0bc85c" />
   </Folder>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/PortfolioTranding/" />
