@@ -8,6 +8,7 @@ namespace AuraWealth.PortfolioTrading.Application.Common.Interfaces
         Task AddAsync(TransactionRecord record, CancellationToken cancellationToken);
 
         // Used by the Queries to fetch the UI ledger
-        Task<IEnumerable<TransactionRecord>> GetByTraderIdAsync(Guid traderId, int page, int pageSize, CancellationToken cancellationToken);
+        //Task<IEnumerable<TransactionRecord>> GetByTraderIdAsync(Guid traderId, int page, int pageSize, CancellationToken cancellationToken);
+        Task<(IEnumerable<TransactionRecord> Items, int TotalCount)> GetPagedByTraderIdAsync(Guid traderId, int pageNumber, int pageSize, CancellationToken cancellationToken);
     }
 }

@@ -13,10 +13,6 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="TraderProfiles\Queries\GetTransactionHistory\" />
-  </ItemGroup>
-
-  <ItemGroup>
     <ProjectReference Include="..\AuraWealth.PortfolioTrading.Domain\AuraWealth.PortfolioTrading.Domain.csproj" />
     <ProjectReference Include="..\IntegrationEvents\AuraWealth.BuildingBlocks.IntegrationEvents.csproj" />
   </ItemGroup>
