@@ -14,8 +14,6 @@
 
   <ItemGroup>
     <Folder Include="TraderProfiles\Queries\GetTransactionHistory\" />
-    <Folder Include="TraderProfiles\Queries\GetAvailableCash\" />
-    <Folder Include="TraderProfiles\Queries\GetHoldingQuantity\" />
   </ItemGroup>
 
   <ItemGroup>
