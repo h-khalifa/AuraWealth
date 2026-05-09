@@ -11,4 +11,7 @@
   <Folder Name="/Modules/PortfolioTranding/Domain/">
     <Project Path="AuraWealth.PortfolioTrading.Domain/AuraWealth.PortfolioTrading.Domain.csproj" Id="4c9a54a9-5da4-4fc2-8d8b-7b9622043646" />
   </Folder>
+  <Folder Name="/Modules/PortfolioTranding/Infrastructure/">
+    <Project Path="AuraWealth.PortfolioTrading.Infrastructure/AuraWealth.PortfolioTrading.Infrastructure.csproj" Id="aab0c5b9-3d62-4477-a884-ed33435339ad" />
+  </Folder>
 </Solution>
