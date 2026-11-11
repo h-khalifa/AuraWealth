@@ -4,14 +4,14 @@
     <Project Path="IntegrationEvents/AuraWealth.BuildingBlocks.IntegrationEvents.csproj" Id="dfd8d8d4-4e69-4cc3-b94f-b5efab0bc85c" />
   </Folder>
   <Folder Name="/Modules/" />
-  <Folder Name="/Modules/PortfolioTranding/" />
-  <Folder Name="/Modules/PortfolioTranding/Application/">
+  <Folder Name="/Modules/PortfolioTrading/" />
+  <Folder Name="/Modules/PortfolioTrading/Application/">
     <Project Path="AuraWealth.PortfolioTrading.Application/AuraWealth.PortfolioTrading.Application.csproj" Id="87237e81-4382-4506-9605-6602830a02dd" />
   </Folder>
-  <Folder Name="/Modules/PortfolioTranding/Domain/">
+  <Folder Name="/Modules/PortfolioTrading/Domain/">
     <Project Path="AuraWealth.PortfolioTrading.Domain/AuraWealth.PortfolioTrading.Domain.csproj" Id="4c9a54a9-5da4-4fc2-8d8b-7b9622043646" />
   </Folder>
-  <Folder Name="/Modules/PortfolioTranding/Infrastructure/">
+  <Folder Name="/Modules/PortfolioTrading/Infrastructure/">
     <Project Path="AuraWealth.PortfolioTrading.Infrastructure/AuraWealth.PortfolioTrading.Infrastructure.csproj" Id="aab0c5b9-3d62-4477-a884-ed33435339ad" />
   </Folder>
 </Solution>
