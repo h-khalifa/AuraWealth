@@ -12,7 +12,7 @@ namespace AuraWealth.PortfolioTrading.Application.TraderProfiles.Queries.GetAvai
         }
         public async Task<GetAvailableCashDto> Handle(GetAvailableCashQuery request, CancellationToken cancellationToken)
         {
-            var cashBalance = await _read.QueryFirstOrDefaultAsync<decimal>("SELECT CashBalance FROM TraderProfiles WHERE Id = @TraderId", new { request.TraderId });
+            var cashBalance = await _read.QueryFirstOrDefaultAsync<decimal>(@"SELECT ""CashBalance"" FROM portfolio.""TraderProfiles"" WHERE ""Id"" = @TraderId", new { request.TraderId });
             return new GetAvailableCashDto(request.TraderId, cashBalance);
         }
     }

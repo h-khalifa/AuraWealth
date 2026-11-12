@@ -32,14 +32,13 @@ namespace AuraWealth.DbMigrator.Migrations.Portfolio
                     b.Property<DateTime>("OccurredOn")
                         .HasColumnType("timestamp with time zone");
 
-                    b.Property<decimal>("PricePerUnit")
+                    b.Property<decimal?>("PricePerUnit")
                         .HasColumnType("decimal(18,4)");
 
-                    b.Property<decimal>("Quantity")
+                    b.Property<decimal?>("Quantity")
                         .HasColumnType("decimal(18,4)");
 
                     b.Property<string>("Symbol")
-                        .IsRequired()
                         .HasColumnType("text");
 
                     b.Property<decimal>("TotalAmount")

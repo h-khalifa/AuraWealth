@@ -4,6 +4,7 @@ using AuraWealth.PortfolioTrading.Application.TraderProfiles.Commands.DepositCas
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Commands.SellAsset;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Commands.WithdrawCash;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Queries.GetAvailableCash;
+using AuraWealth.PortfolioTrading.Application.TraderProfiles.Queries.GetHoldingQuantity;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Queries.GetPortfolioSummary;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Queries.GetTransactionHistory;
 using MediatR;
@@ -116,6 +117,13 @@ namespace AuraWealth.WebAPI.Controllers
             return Ok(result);
         }
         //remaining query for holding quantity can be added here in the future if needed
+        [HttpGet("holding-quantity")]
+        public async Task<IActionResult> GetHoldingQuantity([FromQuery] string symbol, CancellationToken cancellationToken)
+        {
+            var query = new GetHoldingQuantityQuery() { TraderId = _simulatedUserId, Symbol = symbol };
+            var result = await _mediator.Send(query, cancellationToken);
+            return Ok(result);
+        }
         #endregion
     }
 

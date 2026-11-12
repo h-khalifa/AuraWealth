@@ -26,12 +26,12 @@ namespace AuraWealth.PortfolioTrading.Infrastructure.Repositories
 
             // Notice the two SQL statements separated by a semicolon
             var sql = @"
-                SELECT COUNT(*) FROM TransactionRecords WHERE TraderId = @TraderId;
+                SELECT COUNT(*) FROM portfolio.""TransactionRecords"" WHERE ""TraderId"" = @TraderId;
 
-                SELECT Id, TraderId, OccurredOn, TransactionType, Symbol, Quantity, PricePerUnit
-                FROM TransactionRecords
-                WHERE TraderId = @TraderId
-                ORDER BY OccurredOn DESC
+                SELECT ""Id"", ""TraderId"", ""OccurredOn"", ""TransactionType"", ""Symbol"", ""Quantity"", ""PricePerUnit"", ""TotalAmount""
+                FROM portfolio.""TransactionRecords""
+                WHERE ""TraderId"" = @TraderId
+                ORDER BY ""OccurredOn"" DESC
                 OFFSET @Offset ROWS FETCH NEXT @PageSize ROWS ONLY;";
 
             // QueryMultipleAsync executes both statements in ONE database round-trip
