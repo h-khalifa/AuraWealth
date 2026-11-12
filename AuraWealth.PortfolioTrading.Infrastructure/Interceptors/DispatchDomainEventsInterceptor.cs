@@ -23,7 +23,7 @@ namespace AuraWealth.PortfolioTrading.Infrastructure.Interceptors
             // 1. Find all entities that have events
             var entities = dbContext.ChangeTracker
                 .Entries<Entity>()//domain entity
-                .Where(e => e.Entity.DomainEvents.Any())
+                .Where(e => e.Entity.DomainEvents != null && e.Entity.DomainEvents.Any())
                 .Select(e => e.Entity)
                 .ToList();
 

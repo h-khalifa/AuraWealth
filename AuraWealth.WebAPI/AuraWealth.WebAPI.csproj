@@ -11,6 +11,16 @@
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="10.0.15" />
     <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.24.2-preview.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="10.3.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Controllers\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuraWealth.PortfolioTrading.Application\AuraWealth.PortfolioTrading.Application.csproj" />
+    <ProjectReference Include="..\AuraWealth.PortfolioTrading.Infrastructure\AuraWealth.PortfolioTrading.Infrastructure.csproj" />
   </ItemGroup>
 
 </Project>
