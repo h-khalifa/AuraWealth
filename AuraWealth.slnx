@@ -18,4 +18,5 @@
     <File Path="docker-compose.yml" />
   </Folder>
   <Project Path="AuraWealth.DbMigrator/AuraWealth.DbMigrator.csproj" Id="bc2d6489-deb3-468c-9934-9bd47a4116a3" />
+  <Project Path="AuraWealth.WebAPI/AuraWealth.WebAPI.csproj" Id="edce73a6-4485-45ef-9d9b-171e7bebca88" />
 </Solution>
