@@ -14,4 +14,8 @@
   <Folder Name="/Modules/PortfolioTrading/Infrastructure/">
     <Project Path="AuraWealth.PortfolioTrading.Infrastructure/AuraWealth.PortfolioTrading.Infrastructure.csproj" Id="aab0c5b9-3d62-4477-a884-ed33435339ad" />
   </Folder>
+  <Folder Name="/Solution Items/">
+    <File Path="docker-compose.yml" />
+  </Folder>
+  <Project Path="AuraWealth.DbMigrator/AuraWealth.DbMigrator.csproj" Id="bc2d6489-deb3-468c-9934-9bd47a4116a3" />
 </Solution>

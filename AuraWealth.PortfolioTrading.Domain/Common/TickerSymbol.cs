@@ -5,6 +5,10 @@ namespace AuraWealth.PortfolioTrading.Domain.Common
     public class TickerSymbol : ValueObject
     {
         public string Symbol { get; private set; }
+        private TickerSymbol()
+        {
+            
+        }
         public TickerSymbol(string symbol)
         {
             if (string.IsNullOrWhiteSpace(symbol))

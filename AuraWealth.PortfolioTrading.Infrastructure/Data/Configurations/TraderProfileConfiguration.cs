@@ -33,6 +33,15 @@ namespace AuraWealth.PortfolioTrading.Infrastructure.Data.Configurations
                 h.ToTable("AssetHoldings");
                 h.Property(a => a.Quantity).HasColumnType("decimal(18,4)");
 
+                // 🔥 NEW: Explicitly map the TickerSymbol Value Object to a single column
+                h.OwnsOne(a => a.Symbol, s =>
+                {
+                    s.Property(p => p.Symbol)
+                     .HasColumnName("Symbol") // Matches your Dapper query: SELECT Symbol, Quantity...
+                     .HasMaxLength(5)
+                     .IsRequired();
+                });
+
                 // Force the Foreign Key name to match the Dapper query
                 h.WithOwner().HasForeignKey("TraderProfileId");
             });

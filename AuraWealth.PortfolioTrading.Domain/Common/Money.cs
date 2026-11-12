@@ -4,7 +4,7 @@ namespace AuraWealth.PortfolioTrading.Domain.Common
 {
     public class Money : ValueObject
     {
-        public string CurrencyCode { get { return "USD"; }  }
+        public string CurrencyCode { get; }
         public decimal Amount { get; }
         public Money(decimal amount)
         {
@@ -12,6 +12,7 @@ namespace AuraWealth.PortfolioTrading.Domain.Common
                 throw new ArgumentOutOfRangeException(nameof(amount));
 
             Amount = amount;
+            CurrencyCode = "USD"; // Default to USD for now, can be extended later
         }
         protected override IEnumerable<object> GetEqualityComponents()
         {

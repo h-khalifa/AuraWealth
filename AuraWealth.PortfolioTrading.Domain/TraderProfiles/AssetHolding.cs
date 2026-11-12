@@ -8,6 +8,10 @@ namespace AuraWealth.PortfolioTrading.Domain.TraderProfiles
         public TickerSymbol Symbol { get; private set; }
         public decimal Quantity { get; private set; }
 
+        private AssetHolding()
+        {
+            
+        }
         public AssetHolding(TickerSymbol symbol, decimal amount)
         {
             if (amount <= 0)
