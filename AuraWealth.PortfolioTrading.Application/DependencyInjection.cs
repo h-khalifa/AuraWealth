@@ -7,7 +7,7 @@ namespace AuraWealth.PortfolioTrading.Application
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddApplicationServices(this IServiceCollection services)
+        public static IServiceCollection AddPortfolioTradingApplicationServices(this IServiceCollection services)
         {
             //var assembly = typeof(DependencyInjection).Assembly; // Use your Application layer assembly here
             var assembly = Assembly.GetExecutingAssembly();

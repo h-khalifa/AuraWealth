@@ -13,7 +13,7 @@ namespace AuraWealth.PortfolioTrading.Infrastructure
 {
     public static class DependencyInjection
     {
-        public static IServiceCollection AddInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
+        public static IServiceCollection AddPortfolioTradingInfrastructureServices(this IServiceCollection services, IConfiguration configuration)
         {
             // 1. Register the EF Core Interceptor
             services.AddScoped<DispatchDomainEventsInterceptor>();

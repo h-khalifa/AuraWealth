@@ -18,9 +18,9 @@ builder.Services.AddProblemDetails();
 
 
 // 2. Wire up the Infrastructure Layer (Database, Interceptors, Dapper)
-builder.Services.AddInfrastructureServices(builder.Configuration);
+builder.Services.AddPortfolioTradingInfrastructureServices(builder.Configuration);
 // 3. Wire up the Application Layer (MediatR, FluentValidation)
-builder.Services.AddApplicationServices();
+builder.Services.AddPortfolioTradingApplicationServices();
 
 var app = builder.Build();
 
