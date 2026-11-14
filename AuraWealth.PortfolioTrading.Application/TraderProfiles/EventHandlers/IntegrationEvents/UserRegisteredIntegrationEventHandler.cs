@@ -1,6 +1,6 @@
-﻿using AuraWealth.BuildingBlocks.Domain;
-using AuraWealth.BuildingBlocks.IntegrationEvents;
-using AuraWealth.PortfolioTrading.Application.Common.Interfaces;
+﻿using AuraWealth.BuildingBlocks.Application.IntegrationEvents;
+using AuraWealth.BuildingBlocks.Application.Interfaces;
+using AuraWealth.BuildingBlocks.Domain;
 using AuraWealth.PortfolioTrading.Domain.TraderProfiles;
 using MediatR;
 

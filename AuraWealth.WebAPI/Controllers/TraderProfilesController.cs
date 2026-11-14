@@ -1,4 +1,4 @@
-﻿using AuraWealth.BuildingBlocks.IntegrationEvents;
+﻿using AuraWealth.BuildingBlocks.Application.IntegrationEvents;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Commands.BuyAsset;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Commands.DepositCash;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.Commands.SellAsset;

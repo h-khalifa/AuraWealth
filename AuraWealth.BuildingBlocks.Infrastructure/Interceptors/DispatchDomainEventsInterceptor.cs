@@ -2,7 +2,7 @@
 using MediatR;
 using Microsoft.EntityFrameworkCore.Diagnostics;
 
-namespace AuraWealth.PortfolioTrading.Infrastructure.Interceptors
+namespace AuraWealth.BuildingBlocks.Infrastructure.Interceptors
 {
     public class DispatchDomainEventsInterceptor : SaveChangesInterceptor
     {

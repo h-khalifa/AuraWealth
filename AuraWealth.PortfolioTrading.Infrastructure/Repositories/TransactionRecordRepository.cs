@@ -1,4 +1,4 @@
-﻿using AuraWealth.PortfolioTrading.Application.Common.Interfaces;
+﻿using AuraWealth.PortfolioTrading.Application.TraderProfiles.Interfaces;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.ReadModels;
 using AuraWealth.PortfolioTrading.Infrastructure.Data;
 using Dapper;

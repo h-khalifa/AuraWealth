@@ -1,4 +1,5 @@
-﻿using AuraWealth.PortfolioTrading.Application.Common.Interfaces;
+﻿using AuraWealth.BuildingBlocks.Application.Interfaces;
+using AuraWealth.PortfolioTrading.Application.TraderProfiles.Interfaces;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.ReadModels;
 using AuraWealth.PortfolioTrading.Domain.TraderProfiles.Events;
 using MediatR;

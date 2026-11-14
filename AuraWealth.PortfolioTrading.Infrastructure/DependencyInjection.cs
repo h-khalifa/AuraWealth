@@ -1,12 +1,13 @@
 ﻿using AuraWealth.BuildingBlocks.Domain;
-using AuraWealth.PortfolioTrading.Application.Common.Interfaces;
 using AuraWealth.PortfolioTrading.Domain.TraderProfiles;
 using AuraWealth.PortfolioTrading.Infrastructure.Data;
-using AuraWealth.PortfolioTrading.Infrastructure.Interceptors;
 using AuraWealth.PortfolioTrading.Infrastructure.Repositories;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.EntityFrameworkCore;
+using AuraWealth.PortfolioTrading.Application.TraderProfiles.Interfaces;
+using AuraWealth.BuildingBlocks.Application.Interfaces;
+using AuraWealth.BuildingBlocks.Infrastructure.Interceptors;
 
 namespace AuraWealth.PortfolioTrading.Infrastructure
 {

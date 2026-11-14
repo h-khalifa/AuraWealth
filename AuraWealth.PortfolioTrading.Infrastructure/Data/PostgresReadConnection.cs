@@ -1,4 +1,4 @@
-﻿using AuraWealth.PortfolioTrading.Application.Common.Interfaces;
+﻿using AuraWealth.BuildingBlocks.Application.Interfaces;
 using Dapper;
 using Microsoft.Extensions.Configuration;
 using Npgsql;

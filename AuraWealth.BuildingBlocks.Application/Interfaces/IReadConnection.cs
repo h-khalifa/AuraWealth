@@ -1,4 +1,4 @@
-﻿namespace AuraWealth.PortfolioTrading.Application.Common.Interfaces
+﻿namespace AuraWealth.BuildingBlocks.Application.Interfaces
 {
     public interface IReadConnection
     {

@@ -1,7 +1,8 @@
 <Solution>
   <Folder Name="/BuildingBlocks/">
+    <Project Path="AuraWealth.BuildingBlocks.Application/AuraWealth.BuildingBlocks.Application.csproj" Id="d856bc15-65e9-41e2-8a45-2f364486af78" />
     <Project Path="AuraWealth.BuildingBlocks.Domain/AuraWealth.BuildingBlocks.Domain.csproj" />
-    <Project Path="IntegrationEvents/AuraWealth.BuildingBlocks.IntegrationEvents.csproj" Id="dfd8d8d4-4e69-4cc3-b94f-b5efab0bc85c" />
+    <Project Path="AuraWealth.BuildingBlocks.Infrastructure/AuraWealth.BuildingBlocks.Infrastructure.csproj" Id="34ac51e4-26ff-46e8-a941-a65203899f0b" />
   </Folder>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/PortfolioTrading/" />

@@ -1,6 +1,6 @@
 ﻿using AuraWealth.PortfolioTrading.Application.TraderProfiles.ReadModels;
 
-namespace AuraWealth.PortfolioTrading.Application.Common.Interfaces
+namespace AuraWealth.PortfolioTrading.Application.TraderProfiles.Interfaces
 {
     public interface ITransactionRecordRepository
     {

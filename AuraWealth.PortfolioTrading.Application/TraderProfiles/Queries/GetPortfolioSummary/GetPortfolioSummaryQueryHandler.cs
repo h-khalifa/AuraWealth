@@ -1,4 +1,4 @@
-﻿using AuraWealth.PortfolioTrading.Application.Common.Interfaces;
+﻿using AuraWealth.BuildingBlocks.Application.Interfaces;
 using MediatR;
 
 namespace AuraWealth.PortfolioTrading.Application.TraderProfiles.Queries.GetPortfolioSummary

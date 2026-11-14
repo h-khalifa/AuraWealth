@@ -1,4 +1,4 @@
-﻿using AuraWealth.PortfolioTrading.Application.Common.Models;
+﻿using AuraWealth.BuildingBlocks.Application.Models;
 using AuraWealth.PortfolioTrading.Application.TraderProfiles.ReadModels;
 using MediatR;
 

@@ -1,4 +1,4 @@
-﻿namespace AuraWealth.PortfolioTrading.Application.Common.Interfaces
+﻿namespace AuraWealth.BuildingBlocks.Application.Interfaces
 {
     //used for commands, with ef
     public interface IUnitOfWork

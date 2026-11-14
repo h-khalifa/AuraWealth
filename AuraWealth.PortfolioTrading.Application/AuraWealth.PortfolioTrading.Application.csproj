@@ -6,15 +6,10 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
-  <ItemGroup>
-    <PackageReference Include="FluentValidation" Version="12.1.1" />
-    <PackageReference Include="FluentValidation.DependencyInjectionExtensions" Version="12.1.1" />
-    <PackageReference Include="MediatR" Version="14.1.0" />
-  </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuraWealth.BuildingBlocks.Application\AuraWealth.BuildingBlocks.Application.csproj" />
     <ProjectReference Include="..\AuraWealth.PortfolioTrading.Domain\AuraWealth.PortfolioTrading.Domain.csproj" />
-    <ProjectReference Include="..\IntegrationEvents\AuraWealth.BuildingBlocks.IntegrationEvents.csproj" />
   </ItemGroup>
 
 </Project>

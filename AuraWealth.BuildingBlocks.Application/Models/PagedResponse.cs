@@ -1,4 +1,4 @@
-﻿namespace AuraWealth.PortfolioTrading.Application.Common.Models
+﻿namespace AuraWealth.BuildingBlocks.Application.Models
 {
     public record PagedResponse<T>(
         IEnumerable<T> Items,

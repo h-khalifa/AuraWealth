@@ -1,4 +1,4 @@
-﻿using Application.Behaviors;
+﻿using AuraWealth.BuildingBlocks.Application.Behaviors;
 using FluentValidation;
 using Microsoft.Extensions.DependencyInjection;
 using System.Reflection;
