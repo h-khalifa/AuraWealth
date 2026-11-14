@@ -1,5 +1,6 @@
-using AuraWealth.PortfolioTrading.Infrastructure;
 using AuraWealth.PortfolioTrading.Application;
+using AuraWealth.PortfolioTrading.Infrastructure;
+using AuraWealth.WebAPI.Utilities;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -9,6 +10,11 @@ builder.Services.AddControllers();
 // Learn more about configuring OpenAPI at https://aka.ms/aspnet/openapi
 builder.Services.AddOpenApi();
 builder.Services.AddSwaggerGen();
+//exception handling
+builder.Services.AddExceptionHandler<GlobalExceptionHandler>();
+builder.Services.AddProblemDetails();
+
+//---->* end of presentaion layer deps
 
 
 // 2. Wire up the Infrastructure Layer (Database, Interceptors, Dapper)
@@ -25,6 +31,7 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+app.UseExceptionHandler();
 
 app.UseHttpsRedirection();
 
