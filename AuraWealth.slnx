@@ -5,6 +5,9 @@
     <Project Path="AuraWealth.BuildingBlocks.Infrastructure/AuraWealth.BuildingBlocks.Infrastructure.csproj" Id="34ac51e4-26ff-46e8-a941-a65203899f0b" />
   </Folder>
   <Folder Name="/Modules/" />
+  <Folder Name="/Modules/MarketData/">
+    <Project Path="AuraWealth.MarketData.Domain/AuraWealth.MarketData.Domain.csproj" Id="706324fd-1b43-43d7-bb16-71200581c9e3" />
+  </Folder>
   <Folder Name="/Modules/PortfolioTrading/" />
   <Folder Name="/Modules/PortfolioTrading/Application/">
     <Project Path="AuraWealth.PortfolioTrading.Application/AuraWealth.PortfolioTrading.Application.csproj" Id="87237e81-4382-4506-9605-6602830a02dd" />
