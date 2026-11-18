@@ -22,8 +22,11 @@ public static class DependencyInjection
             var interceptor = sp.GetRequiredService<DispatchDomainEventsInterceptor>();
 
             options.UseNpgsql(connectionString, npgsql =>
-                    npgsql.MigrationsHistoryTable("__EFMigrationsHistory", "market_data"))
-                .AddInterceptors(interceptor);
+            {
+                npgsql.MigrationsAssembly("AuraWealth.DbMigrator");
+                npgsql.MigrationsHistoryTable("__EFMigrationsHistory", "market_data");
+            }
+                ).AddInterceptors(interceptor);
         });
 
         services.AddScoped<IMarketDataUnitOfWork>(sp => sp.GetRequiredService<MarketDataDbContext>());

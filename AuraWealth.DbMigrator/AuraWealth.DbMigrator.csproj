@@ -20,6 +20,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\AuraWealth.MarketData.Infrastructure\AuraWealth.MarketData.Infrastructure.csproj" />
     <ProjectReference Include="..\AuraWealth.PortfolioTrading.Infrastructure\AuraWealth.PortfolioTrading.Infrastructure.csproj" />
   </ItemGroup>
 

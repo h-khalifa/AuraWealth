@@ -1,4 +1,5 @@
-﻿using AuraWealth.PortfolioTrading.Infrastructure.Data;
+﻿using AuraWealth.MarketData.Infrastructure.Data;
+using AuraWealth.PortfolioTrading.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -32,6 +33,11 @@ namespace AuraWealth.DbMigrator
                 // var identityContext = services.GetRequiredService<IdentityDbContext>();
                 // await identityContext.Database.MigrateAsync();
 
+                // 3. Resolve the MarketData Module DbContext
+                var marketDataDb = scope.ServiceProvider.GetRequiredService<MarketDataDbContext>();
+                logger.LogInformation("Applying migrations for MarketData module (schema: market_data)...");
+                await marketDataDb.Database.MigrateAsync();
+
                 logger.LogInformation("All database migrations applied successfully.");
             }
             catch (Exception ex)
@@ -51,6 +57,13 @@ namespace AuraWealth.DbMigrator
                     services.AddDbContext<PortfolioDbContext>(options =>
                         options.UseNpgsql(connectionString, x =>
                             x.MigrationsAssembly(typeof(Program).Assembly.FullName)));
+
+                    services.AddDbContext<MarketDataDbContext>(options =>
+                        options.UseNpgsql(connectionString, x =>
+                        {
+                            x.MigrationsAssembly(typeof(Program).Assembly.FullName);
+                            x.MigrationsHistoryTable("__EFMigrationsHistory", "market_data");
+                        }));
                 });
     }
 }
