@@ -15,10 +15,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <ProjectReference Include="..\AuraWealth.MarketData.Application\AuraWealth.MarketData.Application.csproj" />
+    <ProjectReference Include="..\AuraWealth.MarketData.Infrastructure\AuraWealth.MarketData.Infrastructure.csproj" />
     <ProjectReference Include="..\AuraWealth.PortfolioTrading.Application\AuraWealth.PortfolioTrading.Application.csproj" />
     <ProjectReference Include="..\AuraWealth.PortfolioTrading.Infrastructure\AuraWealth.PortfolioTrading.Infrastructure.csproj" />
   </ItemGroup>
