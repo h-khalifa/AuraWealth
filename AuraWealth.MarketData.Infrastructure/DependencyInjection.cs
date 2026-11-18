@@ -28,6 +28,7 @@ public static class DependencyInjection
 
         services.AddScoped<IMarketDataUnitOfWork>(sp => sp.GetRequiredService<MarketDataDbContext>());
         services.AddScoped<ITradableAssetRepository, TradableAssetRepository>();
+        services.AddScoped<IPriceTickRepository, PriceTickRepository>();
 
         return services;
     }
