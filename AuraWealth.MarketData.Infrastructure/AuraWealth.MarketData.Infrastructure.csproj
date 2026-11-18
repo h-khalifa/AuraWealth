@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\AuraWealth.BuildingBlocks.Infrastructure\AuraWealth.BuildingBlocks.Infrastructure.csproj" />
+    <ProjectReference Include="..\AuraWealth.MarketData.Application\AuraWealth.MarketData.Application.csproj" />
+    <ProjectReference Include="..\AuraWealth.MarketData.Domain\AuraWealth.MarketData.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
