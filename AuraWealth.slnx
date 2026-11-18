@@ -6,6 +6,7 @@
   </Folder>
   <Folder Name="/Modules/" />
   <Folder Name="/Modules/MarketData/">
+    <Project Path="AuraWealth.MarketData.Application/AuraWealth.MarketData.Application.csproj" Id="a4231364-1c1c-4a64-8b0d-77f195d8685a" />
     <Project Path="AuraWealth.MarketData.Domain/AuraWealth.MarketData.Domain.csproj" Id="706324fd-1b43-43d7-bb16-71200581c9e3" />
   </Folder>
   <Folder Name="/Modules/PortfolioTrading/" />
