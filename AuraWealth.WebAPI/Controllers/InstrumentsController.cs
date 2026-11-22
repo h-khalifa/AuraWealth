@@ -1,6 +1,10 @@
-﻿using AuraWealth.MarketData.Application.TradableAssets.Commands.ChangeInstrumentStatus;
+﻿using AuraWealth.BuildingBlocks.Application.Models;
+using AuraWealth.MarketData.Application.TradableAssets.Commands.ChangeInstrumentStatus;
 using AuraWealth.MarketData.Application.TradableAssets.Commands.ListInstrument;
 using AuraWealth.MarketData.Application.TradableAssets.Commands.UpdateInstrumentQuote;
+using AuraWealth.MarketData.Application.TradableAssets.Queries.GetAllInstruments;
+using AuraWealth.MarketData.Application.TradableAssets.Queries.GetInstrumentQuote;
+using AuraWealth.MarketData.Application.TradableAssets.Queries.GetPriceHistory;
 using AuraWealth.MarketData.Domain.TradableAssets.Enums;
 using MediatR;
 using Microsoft.AspNetCore.Mvc;
@@ -61,6 +65,40 @@ public sealed class InstrumentsController(ISender sender) : ControllerBase
         var command = new ChangeInstrumentStatusCommand(symbol, request.NewStatus);
         await sender.Send(command, cancellationToken);
         return NoContent();
+    }
+
+    [HttpGet]
+    [ProducesResponseType(typeof(PagedResponse<InstrumentSummaryDto>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetAll(
+        [FromQuery] int pageNumber = 1,
+        [FromQuery] int pageSize = 20,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await sender.Send(new GetAllInstrumentsQuery(pageNumber, pageSize), cancellationToken);
+        return Ok(result);
+    }
+
+    [HttpGet("{symbol}")]
+    [ProducesResponseType(typeof(InstrumentQuoteDto), StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status404NotFound)]
+    public async Task<IActionResult> GetQuote(
+        string symbol,
+        CancellationToken cancellationToken)
+    {
+        var result = await sender.Send(new GetInstrumentQuoteQuery(symbol), cancellationToken);
+        return Ok(result);
+    }
+
+    [HttpGet("{symbol}/history")]
+    [ProducesResponseType(typeof(PagedResponse<PriceTickDto>), StatusCodes.Status200OK)]
+    public async Task<IActionResult> GetHistory(
+    string symbol,
+    [FromQuery] int pageNumber = 1,
+    [FromQuery] int pageSize = 20,
+    CancellationToken cancellationToken = default)
+    {
+        var result = await sender.Send(new GetPriceHistoryQuery(symbol, pageNumber, pageSize), cancellationToken);
+        return Ok(result);
     }
 }
 
